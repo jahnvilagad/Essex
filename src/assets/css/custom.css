@@ -1,0 +1,57 @@
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root:hover {
+    background-color: #007f80 !important;
+    color: #fff;
+}
+
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper{
+    background-color: #007f80 !important;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/OpenSans.ttf") format("truetype");
+  }
+
+  body {
+    font-family: "OpenSans",sans-serif !important;
+    background-color: #f9f7fd !important;
+   }
+   .css-1q5txt9-MuiPaper-root-MuiAppBar-root {
+    background-color: #f9f7fd !important;
+   }
+   .css-10hburv-MuiTypography-root{
+    font-family: "OpenSans",sans-serif !important;
+    white-space: break-spaces;
+}
+
+main h1{
+    font-weight: normal;
+    color: #02205f;
+}
+
+#primary-search-account-menu-mobile {
+    position: relative !important;
+}
+#primary-search-account-menu-mobile:after {
+    content: "";
+    height: 280px;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.css-q0ow90-MuiPaper-root-MuiAppBar-root {
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0), 0px 1px 10px 0px rgba(0,0,0,0) !important;
+}
+
+.css-1633um2-MuiPaper-root{
+    text-align: left !important;
+    font-size: 1.2rem !important;
+    line-height: 1.2 !important;
+    font-weight: 600 !important;
+    color: #121029 !important;
+    padding: 1.5rem 1.5rem !important;
+}
