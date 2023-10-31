@@ -24,7 +24,7 @@
     white-space: break-spaces;
 }
 
-main h1{
+h1{
     font-weight: normal;
     color: #02205f;
 }
@@ -54,4 +54,19 @@ main h1{
     font-weight: 600 !important;
     color: #121029 !important;
     padding: 1.5rem 1.5rem !important;
+}
+
+.css-6nsk4k-MuiButtonBase-root-MuiButton-root:hover{
+    background-color: #007f80 !important;
+}
+
+
+.css-uhy7m3-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded{
+    min-height: auto !important;
+}
+.css-o4b71y-MuiAccordionSummary-content.Mui-expanded{
+    margin: 12px 0 !important;
+}
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded{
+    margin: 0 !important;
 }

@@ -11,6 +11,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+// import { Footer } from '../Components/Footer';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -21,15 +22,15 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const rows = [
-  createData('First visit'),
-  createData('Follow-up'),
-  createData('First visit'),
-  createData('First visit'),
-  createData('First visit'),
+  createData('First visit', 'Janet Boddington', '01/11/2023'),
+  createData('Follow-up', 'Janet Boddington', '01/11/2023'),
+  createData('First visit', 'Janet Boddington', '01/11/2023'),
+  createData('First visit', 'Janet Boddington', '01/11/2023'),
+  createData('First visit', 'Janet Boddington', '01/11/2023'),
 ];
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(Appointment, Patient, Date, Action) {
+  return { Appointment, Patient, Date, Action };
 }
 
 
@@ -59,16 +60,15 @@ export default function Dashboard() {
                     <TableBody>
                       {rows.map((row) => (
                         <TableRow
-                          key={row.name}
+                          key={row.Appointment}
                           sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                           <TableCell component="th" scope="row">
-                            {row.name}
+                            {row.Appointment}
                           </TableCell>
-                          <TableCell>{row.calories}</TableCell>
-                          <TableCell>{row.fat}</TableCell>
-                          <TableCell>{row.carbs}</TableCell>
-                          <TableCell>{row.protein}</TableCell>
+                          <TableCell>{row.Patient}</TableCell>
+                          <TableCell>{row.Date}</TableCell>
+                          <TableCell>{row.Action}</TableCell>
                         </TableRow>
                       ))}
                     </TableBody>
@@ -76,18 +76,100 @@ export default function Dashboard() {
                 </TableContainer>
               </Grid>
               <Grid item xs={12}>
-                <Item>2</Item>
+                <Item>Spire London East Hospital Appointments booked this Week</Item>
+                <TableContainer component={Paper}>
+                  <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>Appointment Reason	</TableCell>
+                        <TableCell>Patient</TableCell>
+                        <TableCell>Date</TableCell>
+                        <TableCell>Action</TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {rows.map((row) => (
+                        <TableRow
+                          key={row.Appointment}
+                          sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                        >
+                          <TableCell component="th" scope="row">
+                            {row.Appointment}
+                          </TableCell>
+                          <TableCell>{row.Patient}</TableCell>
+                          <TableCell>{row.Date}</TableCell>
+                          <TableCell>{row.Action}</TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
               </Grid>
               <Grid item xs={12}>
-                <Item>3</Item>
+                <Item>Latest Letters</Item>
+                <TableContainer component={Paper}>
+                  <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>Appointment Reason	</TableCell>
+                        <TableCell>Patient</TableCell>
+                        <TableCell>Date</TableCell>
+                        <TableCell>Action</TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {rows.map((row) => (
+                        <TableRow
+                          key={row.Appointment}
+                          sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                        >
+                          <TableCell component="th" scope="row">
+                            {row.Appointment}
+                          </TableCell>
+                          <TableCell>{row.Patient}</TableCell>
+                          <TableCell>{row.Date}</TableCell>
+                          <TableCell>{row.Action}</TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
               </Grid>
               <Grid item xs={12}>
-                <Item>4</Item>
+                <Item>Recent Patients</Item>
+                <TableContainer component={Paper}>
+                  <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>Appointment Reason	</TableCell>
+                        <TableCell>Patient</TableCell>
+                        <TableCell>Date</TableCell>
+                        <TableCell>Action</TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {rows.map((row) => (
+                        <TableRow
+                          key={row.Appointment}
+                          sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                        >
+                          <TableCell component="th" scope="row">
+                            {row.Appointment}
+                          </TableCell>
+                          <TableCell>{row.Patient}</TableCell>
+                          <TableCell>{row.Date}</TableCell>
+                          <TableCell>{row.Action}</TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
               </Grid>
             </Grid>
           </Box>
         </Box>
       </Box>
+      {/* <Footer /> */}
     </>
   )
 }
